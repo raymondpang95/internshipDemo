@@ -1,0 +1,56 @@
+$color-main: #455a64;
+$color-secondary-1: #546e7a;
+$color-secondary-2: #607d8b;
+$color-secondary-3: #78909c;
+$color-secondary-4: #1a237e;
+$color-secondary-5: #e5e5e5;
+
+$font-color-1: #888585;
+$font-color-2: #0c0b0b;
+$font-color-3: #fff;
+$font-color-4: #adb5bd;
+
+$font-family: Montserrat, -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei,
+  Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+
+$h1: 24px;
+$h2: 20px;
+$h3: 18px;
+$h4: 16px;
+$h5: 14px;
+$h6: 12px;
+
+h1,
+.h1 {
+  font-size: $h1;
+  margin: 0 0 16px;
+}
+h2,
+.h2 {
+  font-size: $h2;
+  margin: 0 0 16px;
+}
+h3,
+.h3 {
+  font-size: $h3;
+  margin: 0 0 16px;
+}
+h4,
+.h4 {
+  font-size: $h4;
+  margin: 0 0 8px;
+}
+h5,
+.h5 {
+  font-size: $h5;
+  margin: 0 0 8px;
+}
+h6,
+.h6 {
+  font-size: $h6;
+  margin: 0 0 0;
+}
+p {
+  font-size: $h5;
+  margin: 0;
+}

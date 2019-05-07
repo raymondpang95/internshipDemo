@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Resume Edit</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/mdb.min.css" rel="stylesheet">
+    <link href="./internshipCSS/internship.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="studentResumeEdit py-5">
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <p class="h1 text-center mainFontColor font-weight-bold mt-2">Resume Update</p>
+                </div>
+                <form class="px-2" onsubmit="return submition();" method="POST" id="targetForm">
+                    <div class="row no-gutters ">
+                        <div class="col-lg-6 px-2 py-2">
+                            <label for="name" class="mainFontColor font-weight-light">Name
+                            </label>
+                            <input type="text" id="name" name="name" class="form-control">
+                        </div>
+                        <div class="col-lg-6 px-2 py-2">
+                            <label for="age" class="mainFontColor font-weight-light">
+                                Age
+                            </label>
+                            <input type="text" id="age" name="age" class="form-control">
+                        </div>
+                        <div class="col-lg-6 px-2 py-2">
+                            <label for="preferCompany" class="mainFontColor font-weight-light">Nationality
+                            </label>
+                            <input type="text" id="preferCompany" name="preferCompany" class="form-control">
+                        </div>
+                        <div class="col-lg-6 px-2 py-2">
+                            <label for="preferCompany" class="mainFontColor font-weight-light">
+                                Contact Number
+                            </label>
+                            <input type="text" id="preferCompany" name="preferCompany" class="form-control">
+                        </div>
+                        <div class="col-lg-6 px-2 py-2">
+                            <label for="preferCompany" class="mainFontColor font-weight-light">Email
+                            </label>
+                            <input type="text" id="preferCompany" name="preferCompany" class="form-control">
+                        </div>
+                        <div class="col-lg-6 px-2 py-2">
+                            <label for="preferCompany" class="mainFontColor font-weight-light">Prefer Intern Company
+                            </label>
+                            <input type="text" id="preferCompany" name="preferCompany" class="form-control">
+                        </div>
+                        <div class="col-lg-6 px-2 py-2">
+                            <label for="preferSalary" class="mainFontColor font-weight-light">Prefer Salary</label>
+                            <input type="text" id="preferSalary" name="preferSalary" class="form-control">
+                        </div>
+                        <div class="col-lg-6 px-2 py-2">
+                            <label for="contactNumber" class="mainFontColor font-weight-light">Preferred Specialization
+                            </label>
+                            <select class="browser-default custom-select">
+                                <option value="businessAdministration">Business Administration </option>
+                                <option value="finance">Finance</option>
+                                <option value="humanResources">Human Resources</option>
+                                <option value="humanResources">Finance and Investment </option>
+                                <option value="humanResources">Commerce </option>
+                            </select>
+                        </div>
+                        <div class="col-lg-6 px-2 py-2">
+                            <label for="contactNumber" class="mainFontColor font-weight-light">Course</label>
+                            <select class="browser-default custom-select">
+                                <option value="businessAdministration">Business and Management</option>
+                                <option value="finance">Art and Design</option>
+                                <option value="humanResources">Engineering and Information Technology</option>
+                                <option value="humanResources">Humanities and Social Sciences</option>
+                                <option value="humanResources">Education and Public Welfare</option>
+                                <option value="humanResources">Architecture, Building & Construction</option>
+                                <option value="humanResources">Allied Healthcare</option>
+                                <option value="humanResources">Music and Film Making</option>
+                                <option value="humanResources">Nursing & Physiotherapy</option>
+                                <option value="humanResources">Science & Biotechnology</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-lg-6 col-12 px-2 py-2">
+                            <label class="mainFontColor">
+                                Education Background</label>
+                            <div class="containerEducation">
+                                <div class="education d-flex">
+                                    <input type="text" class="form-control" />
+                                </div>
+                            </div>
+                            <button class="btn btn-green mx-0 mt-4 btn-sm" onclick="education();" type="button">
+                                <i class="fas fa-plus pr-2"></i>add more</button>
+                        </div>
+                        <div class="col-lg-6 col-12 px-2 py-2">
+                            <label class="mainFontColor">
+                                Awards</label>
+                            <div class="containerAwards">
+                                <div class="awards d-flex">
+                                    <input type="text" class="form-control" />
+                                </div>
+                            </div>
+                            <button class="btn btn-green mx-0 mt-4 btn-sm" onclick="awards();" type="button">
+                                <i class="fas fa-plus pr-2"></i>add more</button>
+                        </div>
+                        <div class="col-lg-6 col-12 px-2 py-2">
+                            <label class="mainFontColor">
+                                Skills</label>
+                            <div class="containerSkills">
+                                <div class="skills d-flex">
+                                    <input type="text" class="form-control" />
+                                </div>
+                            </div>
+                            <button class="btn btn-green mx-0 mt-4 btn-sm" onclick="skills();" type="button">
+                                <i class="fas fa-plus pr-2"></i>add more</button>
+                        </div>
+                        <div class="col-lg-6 col-12 px-2 py-2">
+                            <label class="mainFontColor">
+                                Prefer Welfare</label>
+                            <div class="containerPreferWelfare">
+                                <div class="preferWelfare d-flex">
+                                    <input type="text" class="form-control" />
+                                </div>
+                            </div>
+                            <button class="btn btn-green mx-0 mt-4 btn-sm" onclick="preferWelfare();" type="button">
+                                <i class="fas fa-plus pr-2"></i>add more</button>
+                        </div>
+                        <div class="col-lg-6 col-12 px-2 py-2">
+                            <label for="introducation" class="mainFontColor font-weight-light">Cetificate</label>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="logoUpload">
+                                <label class="custom-file-label" for="logoUpload">Image Upload </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12 px-2 py-2">
+                            <label for="introducation" class="mainFontColor font-weight-light">Profile Picture</label>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="logoUpload">
+                                <label class="custom-file-label" for="logoUpload">Image Upload </label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12 px-2 py-2">
+                            <label for="introducation" class="mainFontColor font-weight-light">Resume Upload
+                                (docx)</label>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="logoUpload">
+                                <label class="custom-file-label" for="logoUpload">File Upload</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center py-4 mt-3">
+                        <button class="btn btn-main p-2" type="submit">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="js/router.js"></script>
+    <script>
+        var countEducation = 0;
+        var objEducation = document.querySelector(".containerEducation");
+        var newObjEducation = document.createElement("div");
+        newObjEducation.setAttribute("class", "education d-flex py-2");
+        newObjEducation.innerHTML = document.querySelector(".education").innerHTML;
+        function education() {
+            countEducation = objEducation.children.length;
+
+            objEducation.appendChild(newObjEducation.cloneNode(true));
+        }
+        function submition() {
+            var input = document.querySelectorAll(".containerEducation .education");
+            for (var i = 0; i < input.length; i++) {
+                if (input[i].children[0].value == "" && i != 0) {
+                    input[i].remove();
+                } else if (input[i].children[0].value != "" && i != 0) {
+                    input[0].remove();
+                }
+            }
+            document.querySelectorAll(".containerEducation .education input").forEach((each, index) => {
+                each.setAttribute("name", "input" + index);
+            });
+            return true;
+        }
+    </script>
+    <script>
+        var countAwards = 0;
+        var objAwards = document.querySelector(".containerAwards");
+        var newObjAwards = document.createElement("div");
+        newObjAwards.setAttribute("class", "awards d-flex py-2");
+        newObjAwards.innerHTML = document.querySelector(".awards").innerHTML;
+        function awards() {
+            countAwards = objAwards.children.length;
+
+            objAwards.appendChild(newObjAwards.cloneNode(true));
+        }
+        function submition() {
+            var input = document.querySelectorAll(".containerAwards .awards");
+            for (var i = 0; i < input.length; i++) {
+                if (input[i].children[0].value == "" && i != 0) {
+                    input[i].remove();
+                } else if (input[i].children[0].value != "" && i != 0) {
+                    input[0].remove();
+                }
+            }
+            document.querySelectorAll(".containerAwards .awards input").forEach((each, index) => {
+                each.setAttribute("name", "input" + index);
+            });
+            return true;
+        }
+    </script>
+    <script>
+        var countSkills = 0;
+        var objSkills = document.querySelector(".containerSkills");
+        var newObjSkills = document.createElement("div");
+        newObjSkills.setAttribute("class", "skills d-flex py-2");
+        newObjSkills.innerHTML = document.querySelector(".skills").innerHTML;
+        function skills() {
+            countSkills = objSkills.children.length;
+
+            objSkills.appendChild(newObjSkills.cloneNode(true));
+        }
+        function submition() {
+            var input = document.querySelectorAll(".containerSkills .skills");
+            for (var i = 0; i < input.length; i++) {
+                if (input[i].children[0].value == "" && i != 0) {
+                    input[i].remove();
+                } else if (input[i].children[0].value != "" && i != 0) {
+                    input[0].remove();
+                }
+            }
+            document.querySelectorAll(".containerSkills .skills input").forEach((each, index) => {
+                each.setAttribute("name", "input" + index);
+            });
+            return true;
+        }
+    </script>
+    <script>
+        var countPreferWelfare = 0;
+        var objPreferWelfare = document.querySelector(".containerPreferWelfare");
+        var newObjPreferWelfare = document.createElement("div");
+        newObjPreferWelfare.setAttribute("class", "preferWelfare d-flex py-2");
+        newObjPreferWelfare.innerHTML = document.querySelector(".preferWelfare").innerHTML;
+        function preferWelfare() {
+            countSkills = objPreferWelfare.children.length;
+
+            objPreferWelfare.appendChild(newObjPreferWelfare.cloneNode(true));
+        }
+        function submition() {
+            var input = document.querySelectorAll(".containerPreferWelfare .preferWelfare");
+            for (var i = 0; i < input.length; i++) {
+                if (input[i].children[0].value == "" && i != 0) {
+                    input[i].remove();
+                } else if (input[i].children[0].value != "" && i != 0) {
+                    input[0].remove();
+                }
+            }
+            document.querySelectorAll(".containerPreferWelfare .preferWelfare input").forEach((each, index) => {
+                each.setAttribute("name", "input" + index);
+            });
+            return true;
+        }
+    </script>
+</body>
+
+</html>

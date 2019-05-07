@@ -1,0 +1,41 @@
+h1,
+.h1 {
+  font-size: 24px;
+  margin: 0 0 16px;
+}
+
+h2,
+.h2 {
+  font-size: 20px;
+  margin: 0 0 16px;
+}
+
+h3,
+.h3 {
+  font-size: 18px;
+  margin: 0 0 16px;
+}
+
+h4,
+.h4 {
+  font-size: 16px;
+  margin: 0 0 8px;
+}
+
+h5,
+.h5 {
+  font-size: 14px;
+  margin: 0 0 8px;
+}
+
+h6,
+.h6 {
+  font-size: 12px;
+  margin: 0 0 0;
+}
+
+p {
+  font-size: 14px;
+  margin: 0;
+}
+/*# sourceMappingURL=internship_variable.css.map */

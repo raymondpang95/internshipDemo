@@ -1,0 +1,31 @@
+@import "./internship_variable.scss";
+
+body {
+  background-color: $color-secondary-5;
+  font-size: $h5;
+}
+
+.btn-main {
+  border: 1px solid $color-main;
+  &:hover {
+    background-color: $color-main;
+    color: $font-color-3;
+  }
+}
+.mainBgColor {
+  background-color: $color-main;
+}
+.md-form {
+  .mainFontColor {
+    color: $color-secondary-4;
+  }
+}
+.mainFontColor {
+  color: $color-secondary-4;
+}
+.headerLink {
+  color: rgba(#eceff1, 0.7);
+  &:hover {
+    color: rgba($font-color-3, 1);
+  }
+}

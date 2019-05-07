@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Advertisement Create</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/mdb.min.css" rel="stylesheet">
+    <link href="./internshipCSS/internship.css" rel="stylesheet">
+    <link href="./internshipCSS/intership_mixin.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="headerEmployer"></div>
+    <div class="profileEdit py-5">
+        <div class="container">
+            <div class="card">
+                <div class="card-header mb-4">
+                    <p class="h1 text-center mt-2 mainFontColor font-weight-bold">Create New Advertisement</p>
+                </div>
+                <form class="px-2" onsubmit="return submition();" method="POST" id="targetForm">
+                    <div class="row no-gutters">
+                        <div class="col-lg-6 col-12 px-2 py-2">
+                            <label for="title:" class="mainFontColor font-weight-light">Title</label>
+                            <input type="text" id="title:" name="title:" class="form-control" required>
+                        </div>
+                        <div class="col-lg-6 col-12 px-2 py-2">
+                            <label for="location" class="mainFontColor">Location</label>
+                            <input type="text" id="location" name="location" class="form-control" required>
+                        </div>
+                        <div class="col-lg-6 col-12 px-2 py-2">
+                            <label for="salary" class="mainFontColor font-weight-light">Salary</label>
+                            <input type="text" id="salary" name="salary" class="form-control" required>
+                        </div>
+                        <div class="col-lg-6 col-12 px-2 py-2">
+                            <label for="date" class="mainFontColor font-weight-light">Date </label>
+                            <input type="date" id="date" name="date" class="form-control" required>
+                        </div>
+                        <div class="col-lg-6 col-12 px-2 py-2">
+                            <label for="typeofInternStudent" class="mainFontColor font-weight-light">Type Of Intern
+                                Student </label>
+                            <input type="text" id="typeofInternStudent" name="typeofInternStudent" class="form-control"
+                                required>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-lg-6 col-12 px-2 py-2">
+                            <label class="mainFontColor">JOB DESCRIPTION(Scope)</label>
+                            <div class="skillContainer">
+                                <div class="skill d-flex">
+                                    <input type="text" class="form-control" />
+                                </div>
+                            </div>
+                            <button class="btn btn-green mx-0 mt-4 btn-sm" onclick="addMore();" type="button">
+                                add</button>
+                        </div>
+                        <div class="col-lg-6 col-12 px-2 py-2">
+                            <label class="mainFontColor">JOB DESCRIPTION(Responsibilities)</label>
+                            <div class="containerResponsibilities">
+                                <div class="responsibilities d-flex">
+                                    <input type="text" class="form-control" />
+                                </div>
+                            </div>
+                            <button class="btn btn-green mx-0 mt-4 btn-sm" onclick="addMore1();" type="button">
+                                add</button>
+                        </div>
+                        <div class="col-lg-6 col-12 px-2 py-2">
+                            <label class="mainFontColor">JOB DESCRIPTION(Requirements)</label>
+                            <div class="containerRequirements">
+                                <div class="requirements d-flex">
+                                    <input type="text" class="form-control" />
+                                </div>
+                            </div>
+                            <button class="btn btn-green mx-0 mt-4 btn-sm" onclick="addMore2();" type="button">
+                                add</button>
+                        </div>
+                        <div class="col-lg-6 col-12 px-2 py-2">
+                            <label class="mainFontColor d-block">Company Detail</label>
+                            <a href="employerProfile.html" class="btn btn-danger px-2 py-2">Check</a>
+                        </div>
+                    </div>
+                    <div class="text-center py-4 mt-3">
+                        <button class="btn btn-outline-amber px-2 py-2" onclick="submition()" type="button">
+                            Cancel
+                        </button>
+                        <button class="btn btn-main px-2 py-2" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="js/router.js"></script>
+    <script>
+        var count = 0;
+        var obj = document.querySelector(".skillContainer");
+        var newObj = document.createElement("div");
+        newObj.setAttribute("class", "skill d-flex py-2");
+        newObj.innerHTML = document.querySelector(".skill").innerHTML;
+        function addMore() {
+            count = obj.children.length;
+
+            obj.appendChild(newObj.cloneNode(true));
+        }
+        function submition() {
+            var input = document.querySelectorAll(".skillContainer .skill");
+            for (var i = 0; i < input.length; i++) {
+                if (input[i].children[0].value == "" && i != 0) {
+                    input[i].remove();
+                } else if (input[i].children[0].value != "" && i != 0) {
+                    input[0].remove();
+                }
+            }
+            document.querySelectorAll(".skillContainer .skill input").forEach((each, index) => {
+                each.setAttribute("name", "input" + index);
+            });
+            return true;
+        }
+
+        var count1 = 0;
+        var obj1 = document.querySelector(".containerResponsibilities");
+        var newObj1 = document.createElement("div");
+        newObj1.setAttribute("class", "responsibilities d-flex py-2");
+        newObj1.innerHTML = document.querySelector(".responsibilities").innerHTML;
+        function addMore1() {
+            count1 = obj1.children.length;
+
+            obj1.appendChild(newObj1.cloneNode(true));
+        }
+        function submition() {
+            var input = document.querySelectorAll(".containerResponsibilities .responsibilities");
+            for (var i = 0; i < input.length; i++) {
+                if (input[i].children[0].value == "" && i != 0) {
+                    input[i].remove();
+                } else if (input[i].children[0].value != "" && i != 0) {
+                    input[0].remove();
+                }
+            }
+            document.querySelectorAll(".containerResponsibilities .responsibilities input").forEach((each, index) => {
+                each.setAttribute("name", "input" + index);
+            });
+            return true;
+        }
+
+        var count2 = 0;
+        var obj2 = document.querySelector(".containerRequirements");
+        var newObj2 = document.createElement("div");
+        newObj2.setAttribute("class", "requirements d-flex py-2");
+        newObj2.innerHTML = document.querySelector(".requirements").innerHTML;
+        function addMore2() {
+            count2 = obj2.children.length;
+
+            obj2.appendChild(newObj2.cloneNode(true));
+        }
+        function submition() {
+            var input = document.querySelectorAll(".containerRequirements .requirements");
+            for (var i = 0; i < input.length; i++) {
+                if (input[i].children[0].value == "" && i != 0) {
+                    input[i].remove();
+                } else if (input[i].children[0].value != "" && i != 0) {
+                    input[0].remove();
+                }
+            }
+            document.querySelectorAll(".containerRequirements .requirements input").forEach((each, index) => {
+                each.setAttribute("name", "input" + index);
+            });
+            return true;
+        }
+
+
+    </script>
+</body>
+
+</html>
