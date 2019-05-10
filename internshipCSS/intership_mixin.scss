@@ -3,6 +3,7 @@
 body {
   background-color: $color-secondary-5;
   font-size: $h5;
+  color: $font-color-6;
 }
 
 .btn-main {
@@ -21,7 +22,10 @@ body {
   }
 }
 .mainFontColor {
-  color: $color-secondary-4;
+  color: $color-main;
+}
+.secondaryFontColor{
+  color: $font-color-5;
 }
 .headerLink {
   color: rgba(#eceff1, 0.7);
