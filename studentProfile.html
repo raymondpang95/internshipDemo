@@ -2,62 +2,218 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Student Profile</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <link href="./css/mdb.min.css" rel="stylesheet">
-    <link href="./internshipCSS/internship.css" rel="stylesheet">
-    <link href="./internshipCSS/intership_mixin.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Student Profile</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+	<link href="./css/mdb.min.css" rel="stylesheet">
+	<link href="./internshipCSS/internship.css" rel="stylesheet">
+	<link href="./internshipCSS/intership_mixin.css" rel="stylesheet">
+	<link href="./css/style.css" rel="stylesheet">
 </head>
-<style>
-    * {
-        /* border: solid 1px; */
-    }
-</style>
 
 <body>
-    <div id="header"></div>
-    <div class="studentResume py-5 ">
-        <div class="container">
-            <div class="card  m-auto">
-                <div class="card-header">
-                    <h1 class="text-center mt-2 font-weight-bold">Profile</h1>
-                </div>
-                <div class="card-body">
-                    <form action="">
-                        <div class="row no-gutters">
-                            <div class="col-lg-12 py-1">
-                                <label for="username" class="mainFontColor font-weight-light">Username:
-                                </label>
-                                <input type="text" id="username" name="username" class="form-control">
-                            </div>
-                            <div class="col-lg-12 py-1">
-                                <label for="password" class="mainFontColor font-weight-light">Password:
-                                </label>
-                                <input type="password" id="password" name="password" class="form-control">
-                            </div>
-                            <div class="col-lg-12 py-1">
-                                <label for="studentID" class="mainFontColor font-weight-light">Student ID:
-                                </label>
-                                <input type="text" id="studentID" name="studentID" class="form-control">
-                            </div>
-                        </div>
-                        <button type="button" class="btn btn-light p-2">Update</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="footerFixed"></div>
+	<div id="header"></div>
 
-    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
-    <script type="text/javascript" src="js/popper.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/mdb.min.js"></script>
-    <script type="text/javascript" src="js/router.js"></script>
+	<div class="card">
+		<div class="card-header">
+			<h1 class="text-center my-0 font-weight-bold indigo-text h3">Manage Account</h1>
+		</div>
+	</div>
+
+	<div class="studentInfo my-5 pb-5">
+		<div class="container">
+			<div class="row" style="margin: 0 -1rem;">
+				<div class="col-lg-4 col-12 px-3 mb-5 mb-lg-0">
+					<div class="title py-3 px-4 mb-4 list-none">
+						<h5 class="f-600">Setting Options</h5>
+					</div>
+					<div class="card rounded-0">
+						<div class="tabs">
+							<ul class="p-0 m-0 list-none">
+								<li data-tab="My Info" class="target-tab py-3 px-4 active">
+									<h5 class="f-600">My Info</h5>
+								</li>
+								<li data-tab="My Profile" class="target-tab py-3 px-4">
+									<h5 class="f-600">My Profile</h5>
+								</li>
+								<li data-tab="Change Password" class="target-tab py-3 px-4">
+									<h5 class="f-600">Change Password</h5>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-8 col-12 px-3">
+					<div class="card p-3 rounded-0">
+
+						<h3 id="dataTitle" class="f-600 text-center mb-3"></h3>
+
+						<div data-target="My Info" class="detailWrapper active">
+							<div class="imageWrapper">
+								<div class="studentImage before">Click to change</div>
+								<img class="studentImagePreview" src="/img/avatar.png" />
+							</div>
+
+							<form>
+								<input type="file" class="studentImageSelect d-none" />
+								<label for="contact" class="mainFontColor fs-6 f-500 font-weight-light">Student ID:
+								</label>
+								<input type="text" readonly class="form-control mb-4">
+
+								<label for="contact" class="mainFontColor fs-6 f-500 font-weight-light">Contact:
+								</label>
+								<input type="text" id="contact" name="contact" class="form-control mb-4">
+
+								<label for="email" class="mainFontColor fs-6 f-500 font-weight-light">Email:
+								</label>
+								<input type="email" id="email" name="email" class="form-control mb-4">
+
+								<button type="button" class="btn btn-primary mt-3 mx-0">
+									<span>Update</span>
+								</button>
+							</form>
+						</div>
+
+						<div data-target="My Profile" class="detailWrapper">
+							<div class="imageWrapper">
+								<div class="studentImage before">Click to change</div>
+								<img class="studentImagePreview" src="/img/avatar.png" />
+							</div>
+
+							<form>
+								<input type="file" class="studentImageSelect d-none" />
+								<label for="name" class="mainFontColor fs-6 f-500 font-weight-light">Name:
+								</label>
+								<input type="text" id="name" name="name" class="form-control mb-4">
+
+								<label for="specialization" class="mainFontColor fs-6 f-500 font-weight-light">Specialization:
+								</label>
+								<input type="text" id="specialization" name="specialization" class="form-control mb-4">
+
+								<label for="birth" class="mainFontColor fs-6 f-500 font-weight-light">Year of birth:
+								</label>
+								<input type="text" id="birth" name="birth" class="form-control mb-4">
+
+								<label for="address" class="mainFontColor fs-6 f-500 font-weight-light">Address:
+								</label>
+								<input type="text" id="address" name="address" class="form-control mb-4">
+
+								<label for="state" class="mainFontColor fs-6 f-500 font-weight-light">State:
+								</label>
+								<input type="text" id="state" name="state" class="form-control mb-4">
+
+								<label for="country" class="mainFontColor fs-6 f-500 font-weight-light">Country:
+								</label>
+								<input type="text" id="country" name="country" class="form-control mb-4">
+
+								<label for="nationality" class="mainFontColor fs-6 f-500 font-weight-light">Nationality:
+								</label>
+								<input type="text" id="nationality" name="nationality" class="form-control mb-4">
+
+								<button type="button" class="btn btn-primary mt-4 mx-0">
+									<span>Update</span>
+								</button>
+							</form>
+						</div>
+
+						<div data-target="Change Password" class="detailWrapper">
+							<form>
+								<label for="username" class="mainFontColor fs-6 f-500 font-weight-light">Password:
+								</label>
+								<input type="text" id="username" name="username" class="form-control mb-4">
+
+								<label for="username" class="mainFontColor fs-6 f-500 font-weight-light">Retype-password:
+								</label>
+								<input type="text" id="username" name="username" class="form-control mb-4">
+
+								<button type="button" class="btn btn-primary mt-4 mx-0">
+									<span>Update</span>
+								</button>
+							</form>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="footerFixed"></div>
+
+	<script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+	<script type="text/javascript" src="js/popper.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/mdb.min.js"></script>
+	<script type="text/javascript" src="js/router.js"></script>
+
+	<script>
+		var prev = null;
+		var str = "My Info";
+
+		document.querySelector("#dataTitle").innerText = str;
+
+		function changeTab(elem) {
+			const elemData = elem.getAttribute("data-tab");
+			const tabs = document.querySelectorAll(".target-tab");
+			const wrapper = document.querySelectorAll(".detailWrapper");
+
+			if (elem != prev) {
+				for (let x = 0; x < tabs.length; x++) {
+					tabs[x].classList.remove("active");
+					wrapper[x].classList.remove("active");
+				}
+
+				elem.classList.add("active");
+
+				for (let y = 0; y < wrapper.length; y++) {
+					if (wrapper[y].getAttribute("data-target") == elemData) {
+						wrapper[y].classList.add("active");
+
+						str = wrapper[y].getAttribute("data-target");
+					}
+				}
+
+				prev = elem;
+			}
+
+			document.querySelector("#dataTitle").innerText = str;
+		}
+
+		function imageChange(obj, ind) {
+			if (obj.files && obj.files[0]) {
+				var reader = new FileReader();
+
+				reader.onload = function (e) {
+					$('.studentImagePreview:eq('+ ind +')').attr('src', e.target.result);
+				}
+
+				reader.readAsDataURL(obj.files[0]);
+			}
+		}
+
+		window.onload = () => {
+			document.querySelectorAll(".target-tab").forEach(each => {
+				each.addEventListener("click", function () {
+					changeTab(each);
+				});
+			});
+
+			document.querySelectorAll(".studentImage").forEach((each, index) => {
+				each.addEventListener("click", () => {
+					document.querySelectorAll(".studentImageSelect")[index].click();
+				});
+			});
+
+			document.querySelectorAll(".studentImageSelect").forEach((each, index) => {
+				each.addEventListener("change", () => {
+					imageChange(each, index);
+				});
+			});
+		}
+	</script>
 </body>
 
 </html>
