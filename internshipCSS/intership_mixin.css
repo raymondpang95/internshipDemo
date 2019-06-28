@@ -42,6 +42,7 @@ p {
 body {
   background-color: #e5e5e5;
   font-size: 14px;
+  color: #9d9d9d;
 }
 
 .btn-main {
@@ -62,7 +63,11 @@ body {
 }
 
 .mainFontColor {
-  color: #1a237e;
+  color: #455a64;
+}
+
+.secondaryFontColor {
+  color: #555555;
 }
 
 .headerLink {
