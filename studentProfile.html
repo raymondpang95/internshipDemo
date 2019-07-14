@@ -19,7 +19,7 @@
 
 	<div class="card">
 		<div class="card-header">
-			<h1 class="text-center my-0 font-weight-bold indigo-text h3">Manage Account</h1>
+			<h1 class="text-center my-0 font-weight-bold h3">Manage Account</h1>
 		</div>
 	</div>
 
@@ -141,7 +141,7 @@
 		</div>
 	</div>
 
-	<div id="footerFixed"></div>
+	<div id="footer"></div>
 
 	<script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
 	<script type="text/javascript" src="js/popper.min.js"></script>
@@ -195,6 +195,8 @@
 		}
 
 		window.onload = () => {
+			console.log("Initializing");
+
 			document.querySelectorAll(".target-tab").forEach(each => {
 				each.addEventListener("click", function () {
 					changeTab(each);
@@ -212,6 +214,8 @@
 					imageChange(each, index);
 				});
 			});
+
+			console.log("Initialized");
 		}
 	</script>
 </body>

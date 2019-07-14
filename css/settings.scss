@@ -44,16 +44,11 @@ $breakpoint-down-md: "(max-width: " + $max-md + "px)"; // 1 ~ 1024
 $breakpoint-down-lg: "(max-width: " + $max-lg + "px)"; // 1 ~ 1364
 $breakpoint-down-xl: "(max-width: " + $max-xl + "px)"; // 1 ~ 9999
 
-$breakpoint-only-xs: "(min-width: " + $min-xs + "px) and (max-width: " + $max-xs +
-  "px)"; //0 ~ 420
-$breakpoint-only-sm: "(min-width: " + $min-sm + "px) and (max-width: " + $max-sm +
-  "px)"; //421 ~ 768
-$breakpoint-only-md: "(min-width: " + $min-md + "px) and (max-width: " + $max-md +
-  "px)"; //769 ~ 1024
-$breakpoint-only-lg: "(min-width: " + $min-lg + "px) and (max-width: " + $max-lg +
-  "px)"; //1025 ~ 1364
-$breakpoint-only-xl: "(min-width: " + $min-xl + "px) and (max-width: " + $max-xl +
-  "px)"; //1365 ~ 9999
+$breakpoint-only-xs: "(min-width: " + $min-xs + "px) and (max-width: " + $max-xs + "px)"; //0 ~ 420
+$breakpoint-only-sm: "(min-width: " + $min-sm + "px) and (max-width: " + $max-sm + "px)"; //421 ~ 768
+$breakpoint-only-md: "(min-width: " + $min-md + "px) and (max-width: " + $max-md + "px)"; //769 ~ 1024
+$breakpoint-only-lg: "(min-width: " + $min-lg + "px) and (max-width: " + $max-lg + "px)"; //1025 ~ 1364
+$breakpoint-only-xl: "(min-width: " + $min-xl + "px) and (max-width: " + $max-xl + "px)"; //1365 ~ 9999
 /* Global variable */
 
 /* Mixin */
@@ -257,7 +252,7 @@ a {
   background-color: transparent !important;
   margin: 0;
   padding: 0.25rem;
-  overflow: visible;
+  overflow: hidden;
   position: relative;
   &:not([disabled]) {
     &:not(.disabled) {
@@ -284,8 +279,8 @@ a {
   &:after {
     bottom: 0;
     right: 0;
-    border-bottom: 1px solid $color-main;
-    border-right: 1px solid $color-main;
+    border-bottom: 0px solid $color-main;
+    border-right: 0px solid $color-main;
   }
   &:hover {
     &:before {
@@ -301,21 +296,42 @@ a {
       border-right: 1px solid $color-main;
     }
   }
+  &.danger {
+    &:before,
+    &:after {
+      border-color: $color-danger;
+    }
+    span {
+      background-color: $color-danger;
+    }
+  }
+  &.confirm {
+    &:before,
+    &:after {
+      border-color: $color-hightlight;
+    }
+    span {
+      background-color: $color-hightlight;
+    }
+  }
+  &.btn-sm {
+    padding: 0.25rem;
+  }
   span {
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16),
-      0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     background-color: $color-main;
     padding: 0.5rem 1.5rem;
     display: block;
     color: white;
   }
 }
-
+ 
 .grey-text {
   color: #637983 !important;
 }
 
-ul, ol {
+ul,
+ol {
   &.list-none {
     list-style-type: none;
   }
@@ -356,5 +372,33 @@ a {
       }
     }
   }
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+input {
+  &::placeholder {
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+  }
+  &:focus {
+    &::placeholder {
+      opacity: 0;
+      padding-left: 100%;
+    }
+  }
+}
+
+.saperator {
+  width: 100%;
+  height: 1px;
+  background-color: lightgrey;
+  display: block;
+  position: relative;
 }
 /* General Settings */

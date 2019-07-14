@@ -2,88 +2,93 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Profile Edit</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
-    <link href="./css/mdb.min.css" rel="stylesheet">
-    <link href="./internshipCSS/internship.css" rel="stylesheet">
-    <link href="./internshipCSS/intership_mixin.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Profile Edit</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+	<link href="./css/bootstrap.min.css" rel="stylesheet">
+	<link href="./css/mdb.min.css" rel="stylesheet">
+	<link href="./internshipCSS/internship.css" rel="stylesheet">
+	<link href="./internshipCSS/intership_mixin.css" rel="stylesheet">
+	<link href="./css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <div id="headerEmployer"></div>
-    <div class="profileEdit py-5">
-        <div class="container">
-            <div class="card">
-                <p class="h1 text-center py-4 mainFontColor font-weight-bold">Profile Update</p>
-                <form>
-                    <div class="row no-gutters">
-                        <div class="col-lg-6 col-12 px-2 py-2">
-                            <label for="name" class="mainFontColor font-weight-light">Company Name</label>
-                            <input type="text" id="name" name="name" class="form-control">
-                        </div>
-                        <div class="col-lg-6 col-12 px-2 py-2">
-                            <label for="website" class="mainFontColor">Website</label>
-                            <input type="text" id="website" name="website" class="form-control">
-                        </div>
-                        <div class="col-lg-6 col-12 px-2 py-2">
-                            <label for="ssmNumber" class="mainFontColor font-weight-light">SSM Register Number</label>
-                            <input type="text" id="ssmNumber" name="ssmNumber" class="form-control">
-                        </div>
-                        <div class="col-lg-6 col-12 px-2 py-2">
-                            <label for="hRManager" class="mainFontColor font-weight-light">HR Manager</label>
-                            <input type="text" id="hRManager" name="hRManager" class="form-control">
-                        </div>
-                        <div class="col-lg-6 col-12 px-2 py-2">
-                            <label for="hRContact" class="mainFontColor font-weight-light">HR Contact </label>
-                            <input type="text" id="hRContact" name="hRContact" class="form-control">
-                        </div>
-                        <div class="col-lg-6 col-12 px-2 py-2">
-                            <label for="email" class="mainFontColor font-weight-light">Email </label>
-                            <input type="text" id="email" name="email" class="form-control">
-                        </div>
-                        <div class="col-lg-6 col-12 px-2 py-2">
-                            <label for="address" class="mainFontColor font-weight-light">Address</label>
-                            <input type="text" id="address" name="address" class="form-control">
-                        </div>
-                        <div class="col-lg-6 col-12 px-2 py-2">
-                            <label for="contactNumber" class="mainFontColor font-weight-light">Contact Number</label>
-                            <input type="text" id="contactNumber" name="contactNumber" class="form-control">
-                        </div>
-                        <div class="col-lg-6 col-12 px-2 py-2">
-                            <label for="workingHour" class="mainFontColor font-weight-light">Working Hours</label>
-                            <input type="text" id="workingHour" name="workingHour" class="form-control">
-                        </div>
-                        <div class="col-lg-12 col-12 px-2 py-2">
-                            <label for="introducation" class="mainFontColor font-weight-light">Company
-                                Introducation</label>
-                            <textarea class="w-100" name="introducation" id="introducation" cols="10"
-                                rows="5"></textarea>
-                        </div>
-                        <div class="col-lg-12 col-12 px-2 py-2">
-                            <label for="introducation" class="mainFontColor font-weight-light">Logo</label>
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" id="logoUpload">
-                                <label class="custom-file-label" for="logoUpload">Image Upload </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center py-4 mt-3">
-                        <button class="btn btn-main p-2" type="submit">Update</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div id="footer"></div>
-    <script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
-    <script type="text/javascript" src="js/popper.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/mdb.min.js"></script>
-    <script type="text/javascript" src="js/router.js"></script>
+	<div id="headerEmployer"></div>
+
+	<div class="high profileEdit py-5">
+		<div class="container">
+			<div class="card px-3">
+				<p class="h3 text-center py-4 mainFontColor font-weight-bold">Profile Update</p>
+				<form>
+					<div class="row no-gutters">
+						<div class="col-lg-6 col-12 px-2 py-2 mb-5">
+							<label for="name" class="mainFontColor f-600">Company Name</label>
+							<input type="text" id="name" name="name" class="form-control">
+						</div>
+						<div class="col-lg-6 col-12 px-2 py-2 mb-5">
+							<label for="website" class="mainFontColor f-600">Website</label>
+							<input type="text" id="website" name="website" class="form-control">
+						</div>
+						<div class="col-lg-6 col-12 px-2 py-2 mb-5">
+							<label for="ssmNumber" class="mainFontColor f-600">SSM Register Number</label>
+							<input type="text" id="ssmNumber" name="ssmNumber" class="form-control">
+						</div>
+						<div class="col-lg-6 col-12 px-2 py-2 mb-5">
+							<label for="hRManager" class="mainFontColor f-600">HR Manager</label>
+							<input type="text" id="hRManager" name="hRManager" class="form-control">
+						</div>
+						<div class="col-lg-6 col-12 px-2 py-2 mb-5">
+							<label for="hRContact" class="mainFontColor f-600">HR Contact </label>
+							<input type="text" id="hRContact" name="hRContact" class="form-control">
+						</div>
+						<div class="col-lg-6 col-12 px-2 py-2 mb-5">
+							<label for="email" class="mainFontColor f-600">Email </label>
+							<input type="text" id="email" name="email" class="form-control">
+						</div>
+						<div class="col-lg-6 col-12 px-2 py-2 mb-5">
+							<label for="address" class="mainFontColor f-600">Address</label>
+							<input type="text" id="address" name="address" class="form-control">
+						</div>
+						<div class="col-lg-6 col-12 px-2 py-2 mb-5">
+							<label for="contactNumber" class="mainFontColor f-600">Contact Number</label>
+							<input type="text" id="contactNumber" name="contactNumber" class="form-control">
+						</div>
+						<div class="col-lg-6 col-12 px-2 py-2 mb-5">
+							<label for="workingHour" class="mainFontColor f-600">Working Hours</label>
+							<input type="text" id="workingHour" name="workingHour" class="form-control">
+						</div>
+						<div class="col-lg-12 col-12 px-2 py-2 mb-5">
+							<label for="introducation" class="mainFontColor f-600">Company
+								Introducation</label>
+							<textarea class="w-100" name="introducation" id="introducation" cols="10" rows="5"></textarea>
+						</div>
+						<div class="col-lg-12 col-12 px-2 py-2 mb-5">
+							<label for="introducation" class="mainFontColor f-600">Logo</label>
+							<div class="custom-file">
+								<input type="file" class="custom-file-input" id="logoUpload">
+								<label class="custom-file-label" for="logoUpload">Image Upload </label>
+							</div>
+						</div>
+					</div>
+					<div class="text-center py-4 mt-3">
+						<button class="btn btn-primary p-2" type="submit">
+							<span>Update</span>
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="footer"></div>
+
+	<script type="text/javascript" src="js/jquery-3.4.0.min.js"></script>
+	<script type="text/javascript" src="js/popper.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/mdb.min.js"></script>
+	<script type="text/javascript" src="js/router.js"></script>
 </body>
 
 </html>

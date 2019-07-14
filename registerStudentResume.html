@@ -10,17 +10,18 @@
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/mdb.min.css" rel="stylesheet">
     <link href="./internshipCSS/internship.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
 </head>
 
 <body>
     <div class="login">
         <div class="container">
             <div class="card px-2">
-                <p class="h1 text-center py-4 mainFontColor font-weight-bold">Student Resume</p>
+                <p class="h2 text-center py-4 mainFontColor font-weight-bold">Student Resume</p>
                 <form onsubmit="return submition();" method="POST" id="targetForm">
                     <div class="row no-gutters">
-                        <div class="col-lg-6 px-2 py-2">
-                            <label for="contactNumber" class="mainFontColor font-weight-light"> Specialization
+                        <div class="col-lg-6 px-2 py-0 mb-5">
+                            <label for="contactNumber" class="mainFontColor f-600"> Specialization
                             </label>
                             <select class="browser-default custom-select">
                                 <option value="businessAdministration">Business Administration </option>
@@ -30,8 +31,8 @@
                                 <option value="humanResources">Commerce </option>
                             </select>
                         </div>
-                        <div class="col-lg-6 px-2 py-2">
-                            <label for="contactNumber" class="mainFontColor font-weight-light">Course</label>
+                        <div class="col-lg-6 px-2 py-0 mb-5">
+                            <label for="contactNumber" class="mainFontColor f-600">Course</label>
                             <select class="browser-default custom-select">
                                 <option value="businessAdministration">Business and Management</option>
                                 <option value="finance">Art and Design</option>
@@ -45,17 +46,17 @@
                                 <option value="humanResources">Science & Biotechnology</option>
                             </select>
                         </div>
-                        <div class="col-lg-6 px-2 py-2">
-                            <label for="preferCompany" class="mainFontColor font-weight-light">Prefer Intern Company
+                        <div class="col-lg-6 px-2 py-0 mb-5">
+                            <label for="preferCompany" class="mainFontColor f-600">Prefer Intern Company
                             </label>
                             <input type="text" id="preferCompany" name="preferCompany" class="form-control">
                         </div>
-                        <div class="col-lg-6 px-2 py-2">
-                            <label for="preferSalary" class="mainFontColor font-weight-light">Prefer Salary</label>
+                        <div class="col-lg-6 px-2 py-0 mb-5">
+                            <label for="preferSalary" class="mainFontColor f-600">Prefer Salary</label>
                             <input type="text" id="preferSalary" name="preferSalary" class="form-control">
                         </div>
-                        <div class="col-lg-6 col-12 px-2 py-2">
-                            <label class="mainFontColor">
+                        <div class="col-lg-6 col-12 px-2 py-0 mb-5">
+                            <label class="mainFontColor f-600">
                                 Education Background</label>
                             <div class="containerEducation">
                                 <div class="education d-flex">
@@ -66,8 +67,8 @@
                             <button class="btn btn-green mx-0 mt-4 btn-sm" onclick="education();" type="button">
                                 <i class="fas fa-plus pr-2"></i>add more</button>
                         </div>
-                        <div class="col-lg-6 col-12 px-2 py-2">
-                            <label class="mainFontColor">
+                        <div class="col-lg-6 col-12 px-2 py-0 mb-5">
+                            <label class="mainFontColor f-600">
                                 Awards</label>
                             <div class="containerAwards">
                                 <div class="awards d-flex">
@@ -77,8 +78,8 @@
                             <button class="btn btn-green mx-0 mt-4 btn-sm" onclick="awards();" type="button">
                                 <i class="fas fa-plus pr-2"></i>add more</button>
                         </div>
-                        <div class="col-lg-6 col-12 px-2 py-2">
-                            <label class="mainFontColor">
+                        <div class="col-lg-6 col-12 px-2 py-0 mb-5">
+                            <label class="mainFontColor f-600">
                                 Skills</label>
                             <div class="containerSkills">
                                 <div class="skills d-flex">
@@ -88,23 +89,14 @@
                             <button class="btn btn-green mx-0 mt-4 btn-sm" onclick="skills();" type="button">
                                 <i class="fas fa-plus pr-2"></i>add more</button>
                         </div>
-                        <!-- <div class="col-lg-6 col-12 px-2 py-2">
-                            <label class="mainFontColor">
-                                Prefer Welfare</label>
-                            <div class="containerPreferWelfare">
-                                <div class="preferWelfare d-flex">
-                                    <input type="text" class="form-control" />
-                                </div>
-                            </div>
-                            <button class="btn btn-green mx-0 mt-4 btn-sm" onclick="preferWelfare();" type="button">
-                                <i class="fas fa-plus pr-2"></i>add more</button>
-                        </div> -->
                     </div>
                     <div class="text-center py-4 mt-3">
-                        <a href="registerStudent.html" class="btn btn-outline-cyan  p-2">Previous</a>
-                        <!-- <button class="btn btn-main p-2" type="submit">Submit</button> -->
-                        <button type="button" onclick="location.href='./studentHome.html'"
-                            class="btn btn-main p-2">Submit</button>
+                        <a href="registerStudent.html" class="btn btn-primary danger">
+                            <span>Previous</span>
+                        </a>
+                        <button type="button" onclick="location.href='./studentHome.html'" class="btn btn-primary confirm">
+                            <span>Submit</span>
+                        </button>
                     </div>
                 </form>
             </div>
